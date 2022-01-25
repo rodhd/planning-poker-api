@@ -13,7 +13,7 @@ export class SessionsService {
 
   async create(): Promise<Session> {
     const createdSession = new this.sessionModel({
-      id: nanoid(8),
+      sessionId: nanoid(8),
       startTs: new Date(),
     });
     return createdSession.save();
